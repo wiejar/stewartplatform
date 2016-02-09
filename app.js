@@ -38,7 +38,7 @@ var app = http.createServer(function(request, response) {
                     response.writeHead(200, {
                         'Content-Type': contentType
                     });
-                    response.end(content, 'utf-8');
+                    response.end('Error 404', 'utf-8');
                 });
             } else {
                 response.writeHead(500);
