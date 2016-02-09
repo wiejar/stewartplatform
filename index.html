@@ -10,6 +10,15 @@
         <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js" type="text/javascript"></script>
 
         <script>
+            $(document).ready(function() {
+                $("[id^=slider]").slider();
+                $("#slider0").slider("value", 50);
+                $("#slider1").slider("value", 50);
+                $("#slider2").slider("value", 50);
+                $("#slider3").slider("value", 50);
+                $("#slider4").slider("value", 50);
+                $("#slider5").slider("value", 50);
+            });
             createSocket();
         </script>
     </head>

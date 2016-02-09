@@ -1,13 +1,3 @@
-$(document).ready(function() {
-    $("[id^=slider]").slider();
-    $("#slider0").slider("value", 50);
-    $("#slider1").slider("value", 50);
-    $("#slider2").slider("value", 50);
-    $("#slider3").slider("value", 50);
-    $("#slider4").slider("value", 50);
-    $("#slider5").slider("value", 50);
-});
-
 function createSocket() {
 
     var socket = io();
@@ -22,13 +12,17 @@ function createSocket() {
 
     function addMessage(message) {
         var komorka = message.split(";", 3);
+        if(komorka[0]=="ERROR") {
+            komorka=["","",""];
+            alert("Cannot comunicate with shared memory app");
+        }
         var resultsTable = document.getElementById('table');
 
         //usuwanie ostatniego wiersza
         for (var i = 2; i < resultsTable.rows.length;) {
             resultsTable.deleteRow(i);
         }
-
+        
         var row = resultsTable.insertRow(2);
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
