@@ -3,9 +3,12 @@
 	<head>
         <title>BMS real data</title>
         <link rel="stylesheet" type="text/css" href="/bootstrap.css">
+        <!--<link rel="stylesheet" type="text/css" href="/slider.css">-->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
         <script src='/socket.io/socket.io.js'></script>
         <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
         <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"  type="text/javascript"></script>
+        <script src="/bootstrap-slider.js"  type="text/javascript"></script>
         <script type="text/javascript">
             jQuery(document).ready(function() {
                 jQuery('#foo').slider();
@@ -41,6 +44,11 @@
                 cell3.innerHTML = komorka[2];
             }	
         </script>
+          <script>
+  $(function() {
+    $( "[id^=slider]" ).slider();
+  });
+  </script>
     </head>
     <body>
     <div class="container">
@@ -55,24 +63,12 @@
 				<td>Yaw</td>
 			</tr>
 		</table>
-        <p>
-            <input type="text" id="foo" class="span2" value="" data-slider-min="-20" data-slider-max="20" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="hide">
-            </p>
-            <p>
-                <input type="text" id="foo1" class="span2" value="" data-slider-min="-20" data-slider-max="20" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="hide">
-            </p>
-            <p>
-                <input type="text" id="foo2" class="span2" value="" data-slider-min="-20" data-slider-max="20" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="hide">
-            </p>
-            <p>
-                <input type="text" id="foo3" class="span2" value="" data-slider-min="-20" data-slider-max="20" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="hide">
-            </p>
-            <p>
-                <input type="text" id="foo4" class="span2" value="" data-slider-min="-20" data-slider-max="20" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="hide">
-            </p>
-            <p>
-                <input type="text" id="foo5" class="span2" value="" data-slider-min="-20" data-slider-max="20" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="hide">
-            </p>
+        <p>L1:<div id="slider0"></div></p>
+        <p>L2:<div id="slider1"></div></p>
+        <p>L3:<div id="slider2"></div></p>
+        <p>L4:<div id="slider3"></div></p>
+        <p>L5:<div id="slider4"></div></p>
+        <p>L6:<div id="slider5"></div></p>
         </div>
     </body>
 </html>
