@@ -1,6 +1,7 @@
 var net = require('net'),
     http = require('http'),
     fs = require('fs'),
+	math = require('mathjs'),
     path = require('path'),
     index = fs.readFileSync(__dirname + '/index.html');
 
