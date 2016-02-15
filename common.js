@@ -28,8 +28,11 @@ function createSocket() {
         var cell2 = row.insertCell(1);
         var cell3 = row.insertCell(2);
         cell1.innerHTML = komorka[0].toString().replace(",",".");
+		protation(komorka[0]);
         cell2.innerHTML = komorka[1].toString().replace(",",".");
+		rrotation(komorka[1]);
         cell3.innerHTML = komorka[2].toString().replace(",",".");
+		yrotation(komorka[2]);
 		
 		var pitch = komorka[0].toString().replace(",",".");
 		pitch = parseFloat(pitch);
@@ -86,4 +89,28 @@ function createSocket() {
 		var nPgw6 = math.add(Pdw6,W6);
 	}
 	
+}
+
+function protation(pangle) {
+	//alert(pangle);
+		pangle = pangle.replace(/,/g , ".");
+		var pdegrees = (pangle*180)/3.14159;
+		//alert(pdegrees);
+		$("#ipitch").rotate(pdegrees);
+}
+
+function rrotation(rangle) {
+		rangle = rangle.replace(/,/g , ".");
+		//alert(angle);
+		var rdegrees = (rangle*180)/3.14159;
+		//alert(degrees);
+		$("#iroll").rotate(rdegrees);
+}
+
+function yrotation(yangle) {
+		yangle = yangle.replace(/,/g , ".");
+		//alert(angle);
+		var ydegrees = (yangle*180)/3.14159;
+		//alert(degrees);
+		$("#iyaw").rotate(ydegrees);
 }
